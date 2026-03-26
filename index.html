@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Anniversary Card ❤️</title>
+  <title>nyack</title>
 
   <style>
     body {
@@ -12,11 +12,12 @@
       justify-content: center;
       align-items: center;
       font-family: Arial;
+      overflow: hidden;
     }
 
     .card {
-      width: 500px;
-      height: 320px;
+      width: 650px; /* Slightly wider for the long text */
+      height: 450px; /* Slightly taller */
       position: relative;
       perspective: 2000px;
       cursor: pointer;
@@ -24,7 +25,7 @@
     }
 
     .card.open {
-      transform: translateX(125px);
+      transform: translateX(160px);
     }
 
     .inside {
@@ -45,18 +46,19 @@
       height: 100%;
     }
 
-    /* Clean white background, no lines */
     .left {
       background: white;
-      padding: 20px;
+      padding: 25px;
       box-sizing: border-box;
       color: #000;
-      font-size: 14px;
-      line-height: 25px;
+      font-size: 15px; 
+      line-height: 24px;
+      /* This makes the long text scrollable! */
+      overflow-y: auto; 
     }
 
     .right {
-      /* empty */
+      background: transparent;
     }
 
     .cover {
@@ -87,7 +89,8 @@
       justify-content: center;
       align-items: center;
       color: white;
-      font-size: 24px;
+      font-size: 28px;
+      text-align: center;
     }
 
     .back {
@@ -108,17 +111,22 @@
 
   <div class="inside">
     <div class="left">
-      Happy 1 year.<br><br>
-      From everything we've been through,<br>
-      I'm really glad it's you.<br><br>
-      I’d still choose you again and again ❤️
+      <strong>Happy 31,536,000 seconds, 525,600 hours, 365 days, 12 months my Lab!</strong><br><br>
+      
+      I'm really happy Lab physically, emotionally, spiritually, and mentally. I can repeat this every time since I really love you, that I can't even stop my whole body when I want to do something to you, even when I feel tired or lazy.<br><br>
+
+      I didn't love myself until I met you, but I still didn't love myself; I just loved you so much that I forgot to hate myself. I didn't like the way I looked in the mirror, the way I walked, the way I spoke, how I talked, or how I ate. I just wished this wasn't me, but you loved the parts I didn't love, and surprisingly, the things I wished for were granted, and I'm grateful for that.<br><br>
+
+      Sorry for the downs and thanks for the ups. I’d still choose you again and again even when we said to each other that we don't like each other anymore; I'd still choose the part where I can see each other on my iPhone 13.<br><br>
+      
+      <strong>I really, really loved the one year with it, and let's start again with another year ahead of us, Lab. I love you, love you, love you so much. 🧡💛💚💙💜🤎🖤🤍❤️🔥💔❣️💕💞💓💗💖💘💝💟♥️😍😘😻💌<br><br></strong>
     </div>
     <div class="right"></div>
   </div>
 
   <div class="cover">
     <div class="face front">
-      Happy 1 Year ❤️
+      To: My Nigha<br>From: Her Nigga
     </div>
     <div class="face back">
       <img src="img1.jpg">
@@ -132,17 +140,16 @@
 </audio>
 
 <script>
-let isOpen = false;
+let musicStarted = false;
+
 function toggleCard(card) {
   card.classList.toggle("open");
   const music = document.getElementById("bgmusic");
-  if (!isOpen) {
-    music.currentTime = 0;
+
+  if (!musicStarted) {
     music.play();
-  } else {
-    music.pause();
+    musicStarted = true;
   }
-  isOpen = !isOpen;
 }
 </script>
 
